@@ -1,0 +1,43 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul{
+  list-style: none;
+}
+
+button{
+  outline: 0;
+}
+
+body, html{
+  height: 100%;
+}
+
+button{
+  outline: none;
+  border: 0;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+@function vwrem($pixels, $widthproc, $remproc){
+  @if 100% - $widthproc - $remproc != 0%{
+    @return calc(($pixels * ($widthproc / 100%) / 19.2px) * 1vw + ($pixels * ($remproc / 100%) / 16px) * 1rem + $pixels * (100% - $widthproc - $remproc) / 100%);
+  } @else{
+    @return calc(($pixels * ($widthproc / 100%) / 19.2px) * 1vw + ($pixels * ($remproc / 100%) / 16px) * 1rem);
+  }
+}
+
+@function proc($small, $big){
+  @return $small * 100% / $big;
+}
+
+@function vw($value){
+  @return ($value / 19.2px) * 1vw;
+}

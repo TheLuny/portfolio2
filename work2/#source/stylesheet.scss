@@ -1,0 +1,1215 @@
+@import "basic.scss";
+
+@font-face {font-family: "Noe Display";src: url("../fonts/NoeDisplay-Bold.ttf");}
+@font-face {font-family: "Larsseit ExtraBold";src: url("../fonts/Larsseit-ExtraBold.ttf");}
+@font-face {font-family: "Larsseit Regular";src: url("../fonts/Larsseit-Regular.ttf");}
+@font-face {font-family: "Larsseit Bold";src: url("../fonts/Larsseit-Bold.ttf");}
+@font-face {font-family: "Larsseit Light";src: url("../fonts/Larsseit-Light.ttf");}
+
+$color1: #00C9E0;
+$color2: #011627;
+$color3: #ffffff;
+$color4: #41EAD4;
+
+body{
+  color: #ffffff;
+}
+
+h1{
+  font-size: vwrem(120px, 78%, 22%);
+  font-family: "Noe Display";
+}
+
+h2{
+  font-size: vwrem(72px, 70%, 25%);
+  font-family: "Noe Display";
+  text-align: center;
+}
+
+h3{
+  font-size: vwrem(24px, 70%, 20%);
+  font-family: "Larsseit Bold";
+  font-weight: 700;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.15em;
+}
+
+h4{
+  font-size: vwrem(18px, 30%, 40%);
+  font-family: "Larsseit Bold";
+}
+
+.wrapper{
+  height: 100%;
+  width: 100%;
+  background-color: $color2;
+}
+
+header, main, footer{
+  background-color: inherit;
+}
+
+main{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  gap: vwrem(300px, 85%, 0%);
+  position: relative;
+  overflow: hidden;
+  background-color: $color2;
+}
+
+footer{
+  padding: vwrem(120px, 50%, 30%) vw(359px) vwrem(150px, 80%, 20%);
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: $color2;
+  &::before{
+    content:'';
+    position: absolute;
+    background: linear-gradient(180deg, #09F4F4 0%, #00C9E0 100%);;
+    width: vwrem(2px, 30%, 70%);
+    height: vwrem(80px, 30%, 70%);
+    border-radius: vwrem(13px, 30%, 70%);
+    top: calc(-0.5 * vwrem(80px, 30%, 70%));
+    left: 50%;
+  }
+}
+
+.header{
+  padding: vwrem(77px, 60%, 40%) vw(250px) calc(vwrem(1194px, 50%, 0%) - 100vh + vwrem(60px, 10%, 0%));
+  background-image: url("../images/header-bg.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  height: vwrem(1194px, 50%, 0%);
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  position: relative;
+  z-index: 5;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &::after{
+    content: '';
+    position: absolute;
+    display: flex;
+    top: calc(101% - vwrem(377px, 60%, 40%));   //not 100% because gap appears
+    height: vwrem(377px, 60%, 40%);
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(1, 22, 39, 0) 0%, #011627 76.64%, #011627 100%);
+    z-index: -1;
+  }
+}
+
+.header__upper-body{
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo{
+  font-size: vwrem(36px, 50%, 50%);
+  span{
+    color: $color1;
+  }
+}
+
+.header__menu,
+.header__menu-list,
+.header__menu-body{
+  display: flex;
+  flex-direction: row;
+}
+
+.header__menu-body{
+  align-items: center;
+}
+
+.header__menu-list{
+  gap: vwrem(20px, 30%, 40%);
+}
+
+.header__menu-item{
+  font-family: "Larsseit Regular";
+  font-size: vwrem(16px, 20%, 40%);
+  &:hover{
+    color: $color4;   //edit
+  }
+}
+
+.header__menu-button{
+  display: none;
+  background-color: $color1;
+  font-family: "Larsseit Bold";
+  font-size: vwrem(16px, 20%, 80%);
+  padding: vwrem(22px, 30%, 70%) vwrem(58px, 30%, 70%) vwrem(22px, 30%, 70%);
+  border-radius: vwrem(48px, 30%, 70%);
+  color: $color3;
+  letter-spacing: 2px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s ease-in-out all;
+  box-shadow: 5px 15px 40px rgba(0, 201, 224, 0.2);
+  z-index: 50;
+  &:hover{
+    background-color: #011627;
+    box-shadow: 0 0 15px #FCFCFC;
+  }
+  &::after{
+    content:'';
+    position: absolute;
+    background: #e4e4e4;
+    width: vwrem(30px, 30%, 70%);
+    height: vwrem(2px, 30%, 70%);
+    border-radius: vwrem(16px, 30%, 70%);
+    top: 50%;
+    left: proc(152px, 167px);
+  }
+}
+
+.header__main-text{
+  align-self: center;
+  text-align: center;
+  max-width: vwrem(643px, 10%, 90%);
+  h4{
+    margin: vwrem(31px, 60%, 40%) 0 vwrem(50px, 90%, 10%);
+    letter-spacing: 0.1em;
+  }
+  span{
+    font-size: vwrem(17px, 40%, 60%);
+    font-family: "Larsseit Regular";
+  }
+}
+
+.header__lower-block{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__icon-wrapper{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__decor-scroll{
+  & span{
+    font-family: "Larsseit Bold";
+    font-size: vwrem(15px, 40%, 60%);
+    position: relative;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+  }
+}
+
+.header__decor-scroll span::after{
+  content:'';
+  position: absolute;
+  width: vwrem(2px, 20%, 80%);
+  height: vwrem(80px, 20%, 80%);
+  background-color: $color1;
+  bottom: calc(100% + vwrem(15px, 90%, 10%));
+  right: 50%;
+  border-radius: 13px;
+  animation: 10s linear scroll-decor-anim infinite;
+}
+
+.header__icon-wrapper{
+  gap: vwrem(20px, 30%, 70%);
+  position:relative;
+}
+
+.social-icon{
+  color: #41EAD4;
+  font-size: vwrem(24px, 30%, 70%);
+  cursor: pointer;
+  transition: 0.1s linear all;
+  &:hover{
+    transform: scale(1.2);
+    color: #1DE8FB;
+    filter: drop-shadow(1px 1px 2px $color1);
+  }
+}
+
+.bg-light-1{
+  position: absolute;
+  width: vw(1070px);
+  height: vw(1016px);
+  left: vw(-52px);
+  top: vwrem(302px, 50%, 20%);
+  background: #BE41EA;
+  opacity: 0.11;
+  filter: blur(vwrem(125px, 50%, 20%));
+}
+
+.bg-light-2{
+  position: absolute;
+  width: vw(1419px);
+  height: vw(1348px);
+  left: vw(-52px);
+  top: vwrem(302px, 50%, 20%);
+  background: #41EAD4;
+  opacity: 0.07;
+  filter: blur(vwrem(125px, 50%, 20%));
+}
+
+.bg-light-3{
+  position: absolute;
+  width: vw(1099px);
+  height: vw(1044px);
+  left: vw(1185px);
+  top: vwrem(444px, 50%, 20%);
+  background: #7741EA;
+  opacity: 0.1;
+  filter: blur(vwrem(125px, 50%, 20%));
+}
+
+.bg-light-4{
+  position: absolute;
+  width: vw(182.99px);
+  height: vw(214.9px);
+  left: vw(457.8px);
+  top: vwrem(584px, 50%, 20%);
+  filter: blur(vwrem(125px, 50%, 20%));
+  background: #7741EA;
+  opacity: 0.5;
+  transform: matrix(-0.9, -0.44, -0.44, 0.9, 0, 0);
+}
+
+.bg-light-5{
+  position: absolute;
+  width: vw(182.99px);
+  height: vw(214.9px);
+  left: vw(1972.8px);
+  top: vwrem(777.4px, 50%, 20%);
+  filter: blur(vwrem(125px, 50%, 20%));
+  background: #7741EA;
+  opacity: 0.5;
+  transform: matrix(-0.9, -0.44, -0.44, 0.9, 0, 0);
+}
+
+.bg-light-6{
+  position: absolute;
+  width: vw(360.86px);
+  height: vw(423.78px);
+  left: vw(2241.36px);
+  top: vwrem(876.55px, 50%, 20%);
+  filter: blur(vwrem(125px, 50%, 20%));
+  opacity: 0.5;
+  transform: matrix(-0.9, -0.44, -0.44, 0.9, 0, 0);
+  background: #41EAD4;
+  opacity: 0.5;
+}
+
+.bg-light-7{
+  position: absolute;
+  width: vw(360.86px);
+  height: vw(423.78px);
+  top: vwrem(352.55px, 50%, 20%);
+  filter: blur(vwrem(125px, 50%, 20%));
+  opacity: 0.5;
+  background: #41EAD4;
+  left: vw(-72px);
+  transform: rotate(-26.06deg);
+}
+
+.bg-light-8{
+  position: absolute;
+  width: vw(360.86px);
+  height: vw(423.78px);
+  top: vwrem(876.55px, 50%, 20%);
+  filter: blur(vwrem(100px, 50%, 20%));
+  opacity: 0.5;
+  background: #41EAD4;
+  left: vw(1900px);
+  transform: matrix(-0.9, -0.44, -0.44, 0.9, 0, 0);
+}
+
+.bg-image{ //edit
+  position: absolute;
+  background-image: url("../images/big-bg-image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 3287px;
+  height: 2465px;
+  left: -234px;
+  top: 1847px;
+}
+
+.adventures{
+  width: calc(100vw - 30vw - 80px);
+  margin: 0 0 0 vw(359px);
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.adventures__title-block{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  gap: vwrem(33px, 60%, 30%);
+  align-items:center;
+  & > img{
+    width: vwrem(24px, 40%, 60%);
+    height: vwrem(24px, 40%, 60%);
+    margin-top: vwrem(12px, 40%, 60%);
+  }
+  & > span{
+    margin-top: vwrem(12px, 40%, 60%);
+  }
+}
+
+.adventures__section-desc{
+  font-size: vwrem(16px, 60%, 40%);
+  font-family: "Larsseit Regular";
+}
+
+.adventures__menu{
+  margin-top: vwrem(83px, 50%, 15%);
+  user-select: none;
+}
+
+.adventures__menu-slide{
+  width: vwrem(282px, 50%, 0%);
+  text-align: center;
+  height: vwrem(57px, 30%, 30%);
+  font-size: vwrem(16px, 50%, 40%);
+  position: relative;
+  font-family: 'Larsseit Bold';
+  font-weight: 700;
+  line-height: 110%;
+  cursor: pointer;
+  color: #FFFFFF;
+  opacity: 0.5;
+  &::after{
+    content: "";
+    position:absolute;
+    height: 2px;
+    opacity: 0.3;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background-color: $color4;
+  }
+  div{
+    position:absolute;
+    display: none;
+    border-radius: 13px;
+    height: 4px;
+    width: 100%;
+    top: calc(100% - 1px);
+    left: 0;
+    background-color: $color4;
+  }
+  &:nth-of-type(1){
+    color: $color4;
+    opacity: 1;
+    & > div{
+      display: block;
+    }
+  }
+}
+
+.adventures__trips{
+  margin-top: vw(150px);
+  position: relative;
+  max-width: 100%;
+  & > div {
+    max-width: 100%;
+  }
+}
+
+.adventures__bottom-decor{
+  content: "";
+  position: absolute;
+  top: calc(100% - vwrem(230px, 50%, 20%) / 1.32);
+  left: calc(-1 * vwrem(230px, 50%, 20%) / 4 );
+  background-image: url("../images/Dots.svg");
+  width: vwrem(233px, 50%, 20%);
+  height: vwrem(233px, 50%, 20%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.adventures__counter-block{
+  position: absolute;
+  z-index: 50;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  left: vwrem(-94px, 50%, 20%);
+  &::before{
+    content: "";
+    position:absolute;
+    height: 2px;
+    width: vwrem(172px, 50%, 20%);
+    left: 0;
+    background-color: $color4;
+  }
+  &::after{
+    content: "";
+    position:absolute;
+    height: vwrem(12px, 50%, 20%);
+    width: 2px;
+    left: 0;
+    background-color: $color4;
+  }
+}
+
+.adventures__counter{
+  margin-top: 8px;
+  font-family: "Larsseit ExtraBold";
+  font-weight: 800;
+  font-size: vwrem(24px, 50%, 20%);
+  line-height: 150%;
+  letter-spacing: 0.15em;
+  color: $color4;
+}
+
+.adventures__counter-desc{
+  font-family: "Larsseit Regular";
+  font-weight: 700;
+  font-size: vwrem(24px, 50%, 20%);
+  line-height: 150%;
+  letter-spacing: 0.15em;
+}
+
+.adventures__trips-slide{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  position: relative;
+  min-width: 0;
+  gap: vw(126px);
+  max-width: 100%;
+  &::after{
+    content:'';
+    position: absolute;
+    background: #41EAD4;
+    width: vwrem(133px, 40%, 40%);
+    height: vwrem(2px, 30%, 70%);
+    border-radius: vwrem(13px, 30%, 70%);
+    top: calc(100% - vwrem(2px, 30%, 70%));
+    left: calc(100% - vwrem(133px, 40%, 40%));
+  }
+  &::before{
+    content:'';
+    position: absolute;
+    background: #41EAD4;
+    width: vwrem(2px, 30%, 70%);
+    height: vwrem(31px, 30%, 70%);
+    border-radius: vwrem(13px, 30%, 70%);
+    top: calc(100% - vwrem(31px, 30%, 70%));
+    left: calc(100% - vwrem(2px, 40%, 40%))
+  }
+}
+.adventures__images{
+  position: relative;
+  min-width: vwrem(486px, 50%, 20%);
+  max-width: vwrem(486px, 50%, 20%);
+  min-height: 100%;
+  max-height: 100%;
+}
+
+.adventures__images-wrapper{
+  height: 100%;
+}
+
+.adventures__image{
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  position: relative;
+}
+
+.adventures__image:nth-of-type(1){background-image:url("../images/trip-image-1.jpg");}
+.adventures__image:nth-of-type(2){background-image:url("../images/trip-image-2.jpg");}
+.adventures__image:nth-of-type(3){background-image:url("../images/trip-image-3.jpg");}
+
+.adventures__image-arrow-left,
+.adventures__image-arrow-right{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: vwrem(24px, 50%, 20%);
+  width: vwrem(65px, 50%, 20%);
+  height: vwrem(65px, 50%, 20%);
+  position: absolute;
+  top: calc(100% - vwrem(65px, 50%, 20%));
+  background-color: $color2;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.adventures__image-arrow-left.swiper-button-disabled,
+.adventures__image-arrow-right.swiper-button-disabled{
+  cursor: default;
+}
+
+.adventures__image-arrow-left{
+  left: calc(100% - 2 * vwrem(65px, 50%, 20%));
+  border-top-left-radius: 8px;
+  border-right: 1px solid #061D31;
+}
+
+.adventures__image-arrow-right{
+  left: calc(100% - vwrem(65px, 50%, 20%));
+  border-bottom-right-radius: 8px;
+  border-left: 1px solid #061D31;
+}
+
+.adventures__trip-comment,
+.adventures__trip-text-block{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.adventures__trip-comment{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100%;
+}
+
+.adventures__trip-text-block{
+  margin-top: vw(67px);
+}
+
+.adventures__trip-title,
+.about-us__title{
+  font-size: vwrem(65px, 70%, 30%);
+  font-family: "Noe Display";
+  margin-bottom: vwrem(34px, 50%, 20%);
+}
+
+.about-us__title{
+  margin-bottom: vwrem(22px, 50%, 20%);
+}
+
+.adventures__trip-desc{
+  padding-right: vw(161px);
+}
+
+.adventures__trip-desc,
+.about-us__main-text{
+  font-family: 'Larsseit Light';
+  font-size: vwrem(17px, 50%, 30%);
+  line-height: 150%;
+  letter-spacing: -0.02rem;
+}
+
+.adventures__trip-desc-bold,
+.about-us__main-text-bold{
+  font-family: 'Larsseit Bold';
+}
+
+.adventures__trip-offers-link{
+  background-color: $color1;
+  font-family: 'Larsseit Bold';
+  font-size: vwrem(14px, 50%, 40%);
+  border-radius: vwrem(48px, 30%, 70%);
+  padding: vwrem(19px, 60%, 30%) vwrem(47px, 60%, 30%);
+  text-align: center;
+  margin: vw(45px) 0 vw(79px);
+  color: $color3;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s ease-in-out all;
+  box-shadow: 5px 15px 40px rgba(0, 201, 224, 0.2);
+  line-height: 190%;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  &:hover{
+    background-color: #011627;
+    box-shadow: 0 0 15px #FCFCFC;
+  }
+  &::after{
+    content:'';
+    position: absolute;
+    background: #e4e4e4;
+    width: vwrem(30px, 30%, 70%);
+    height: vwrem(2px, 30%, 70%);
+    border-radius: vwrem(16px, 30%, 70%);
+    top: 50%;
+    left: calc(100% - 0.5 * vwrem(30px, 30%, 70%));
+  }
+}
+
+.adventures__trip-share{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  gap: vwrem(20px, 40%, 40%);
+  align-self: flex-end;
+  padding: 0 vwrem(14px, 40%, 40%) vwrem(18px, 40%, 40%) 0;
+  span{
+    font-family: 'Larsseit Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: vwrem(15px, 40%, 30%);
+    line-height: 150%;
+    letter-spacing: 0.15em;
+  }
+}
+
+.adventures__trip-share-icons{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  position: relative;
+  gap: vwrem(23px, 40%, 40%);
+}
+
+.about-us{
+  margin: 0 0 0 vw(359px);
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: row;
+  width: calc(100vw - 33.333333vw - 80px);
+}
+
+.about-us__text-block{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-us__photos{
+  display: grid;
+  grid-template-columns: vwrem(395px, 80%, 20%) vwrem(395px, 80%, 20%);
+  margin-left: vw(88px);
+}
+
+.about-us__photos-for-adaptive{
+  display: none;
+}
+
+.about-us__more-link{
+  background-color: rgb(0, 201, 224);
+  font-family: "Larsseit Bold";
+  font-size: vwrem(14px, 60%, 20%);
+  border-radius: calc(0.75vw + 2.1rem);
+  padding: vwrem(19px, 50%, 20%) vwrem(48px, 50%, 20%);
+  text-align: center;
+  margin-top: vwrem(38px, 50%, 20%);
+  color: rgb(255, 255, 255);
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out 0s;
+  box-shadow: rgb(0 201 224 / 20%) 5px 15px 40px;
+  line-height: 190%;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  &:hover{
+    background-color: #011627;
+    box-shadow: 0 0 15px #FCFCFC;
+  }
+  &::after{
+    content:'';
+    position: absolute;
+    background: #e4e4e4;
+    width: vwrem(30px, 30%, 70%);
+    height: vwrem(2px, 30%, 70%);
+    border-radius: vwrem(16px, 30%, 70%);
+    top: 50%;
+    left: calc(100% - 0.5 * vwrem(30px, 30%, 70%));
+  }
+}
+
+.about-us__photo{
+  background-position: center;
+  background-size: contain;
+  height: vwrem(395px, 80%, 20%);
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+.about-us__photo:nth-of-type(1){background-image: url("../images/company-photo1.jpg");} //edit
+.about-us__photo:nth-of-type(2){background-image: url("../images/company-photo2.png");}
+.about-us__photo:nth-of-type(3){background-image: url("../images/company-photo3.png");}
+.about-us__photo:nth-of-type(4){background-image: url("../images/company-photo4.png");}
+
+.about-us__ceo-name{
+  position: absolute;
+  padding: vwrem(26px, 60%, 20%) vwrem(19px, 60%, 20%);
+  background-color: $color3;
+  color: #000;
+  border-radius: 8px;
+  font-family: 'Larsseit Regular';
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  font-size: vwrem(15px, 60%, 30%);
+  top: proc(270px, 395px);
+  left: proc(-50px, 395px);
+  span{
+    color: $color1;
+  }
+}
+
+.reviews{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: vwrem(100px, 70%, 30%);
+  background-color: $color2;
+  margin: 0 vwrem(120px, 90%, 5%);
+  h2{
+    margin-bottom: vwrem(31px, 70%, 30%);
+  }
+  h3{
+    margin: 0 vwrem(325px, 90%, 10%) vwrem(73px, 70%, 30%) vwrem(325px, 90%, 10%);
+  }
+  &::before{
+    content:'';
+    position: absolute;
+    background: linear-gradient(180deg, #09F4F4 0%, #00C9E0 100%);;
+    width: vwrem(2px, 30%, 70%);
+    height: vwrem(80px, 30%, 70%);
+    border-radius: vwrem(13px, 30%, 70%);
+    top: calc(-0.5 * vwrem(80px, 30%, 70%));
+    left: 50%;
+  }
+}
+
+.reviews__reviews-wrapper{
+  display: grid;
+  grid-template-columns: vwrem(510px, 80%, 5%) vwrem(510px, 80%, 5%);
+  gap: vwrem(24px, 70%, 30%);
+}
+
+.reviews__reviews-for-adap{
+  display: none;
+}
+
+.reviews__review{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: #02223B;
+  box-shadow: 0px 20px 30px rgba(0, 201, 224, 0.03);
+  border-radius: 5px;
+  padding: vwrem(75px, 90%, 5%) vwrem(74px, 90%, 5%) vwrem(75px, 90%, 5%) vwrem(102px, 90%, 5%);
+}
+
+.reviews__review-text{
+  margin-bottom: vwrem(27px, 70%, 30%);
+  position: relative;
+  &::before{
+    content:'';
+    position: absolute;
+    background-image: url("../images/“.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: vwrem(32px, 30%, 70%);
+    height: vwrem(25px, 30%, 70%);
+    left: calc(-1 * vwrem(52px, 30%, 70%));
+  }
+}
+
+.reviews__review-text-regular{
+  font-family: 'Larsseit Regular';
+  font-weight: 400;
+  font-size: vwrem(18px, 70%, 30%);
+  line-height: 190%;
+  letter-spacing: 0.05em;
+}
+
+.reviews__review-text-bold{
+  font-family: 'Larsseit Regular';
+  font-weight: 600;
+  font-size: vwrem(18px, 70%, 30%);
+  line-height: 190%;
+  letter-spacing: 0.05em;
+}
+
+.reviews__reviewer-info{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  & > img{
+    margin-right: vwrem(15px, 70%, 30%);
+  }
+}
+
+.reviews__reviewer-name{
+  font-family: 'Larsseit Regular';
+  font-weight: 700;
+  font-size: vwrem(12px, 70%, 30%);
+  line-height: 170%;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.reviews__soon-title{
+  margin-top: vwrem(150px, 50%, 30%); //edit
+  text-align: center;
+}
+
+.reviews__soon-subtitle{
+  margin: vwrem(30px, 30%, 30%) 0 vwrem(50px, 30%, 30%); //edit
+  text-align: center;
+  letter-spacing: 0.1em; //edit
+}
+
+.footer__footer-main{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: vw(140px); //edit
+  flex-wrap: wrap;
+}
+
+.footer__column-wrapper{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: vwrem(140px, 80%, 20%); //edit
+}
+
+
+.footer__column{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  flex-basis: max-content;
+  &:last-child{
+    margin-left: auto;
+  }
+}
+
+.footer__column-title{
+  font-size: vwrem(18px, 50%, 30%); //edit
+  font-family: "Larsseit Regular";
+  letter-spacing: 0.05em;         //edit
+  text-transform: uppercase;
+}
+
+.footer__column-option__text{
+  font-size: vwrem(14px, 30%, 30%); //edit
+  font-family: "Larsseit Regular";
+  letter-spacing: 0.05em;           //edit
+  padding: calc(vwrem(15px, 50%, 30%) / 2) 0;
+  &:hover{
+    color: $color1;
+  }
+}
+
+.footer__column-decor{
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  margin: vwrem(15px, 50%, 30%) 0 ; //edit
+}
+
+.footer__column-decor-line{
+  background-color: $color4;
+  height: 2px;           //edit
+  width: 50px;          //edit
+  transition: 0.3s linear all;
+}
+
+.footer__column-decor-sqr{
+  width: vwrem(7px, 50%, 30%);//edit
+  height: vwrem(7px, 50%, 30%);//edit
+  border: 2px solid $color4;//edit
+  transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+
+.footer__column-icon-wrapper{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+.footer__icon{
+  display:inline-block;
+  padding: 0 calc(vwrem(20px, 70%, 20%) / 2); //edit
+  &:nth-of-type(1){
+    padding-left: 0; //edit
+  }
+  &:last-of-type{
+    padding-right: 0; //edit
+  }
+}
+
+.footer__copyright{
+  font-size: vwrem(14px, 50%, 30%); //edit
+  font-family: "Larsseit Regular"; //edit
+  letter-spacing: 0.1em;           //edit
+  margin: vwrem(60px, 70%, 30%) 0 vwrem(40px, 70%, 30%);  //edit
+}
+
+.footer__logo{
+  font-size: vwrem(36px, 50%, 50%);
+  span{
+    color: $color1;
+  }
+}
+
+@keyframes scroll-decor-anim{
+  0%{
+    height: vwrem(30px, 20%, 80%);
+  }
+  40%{
+    height: vwrem(80px, 20%, 80%);
+  }
+  60%{
+    height: vwrem(80px, 20%, 80%);
+  }
+  100%{
+    height: vwrem(30px, 20%, 80%);
+  }
+}
+
+@media (max-width: 1675px) {
+  .about-us{
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1380px) {
+  .adventures{
+    width: 80%;
+    margin: 0 auto;
+  }
+  footer{
+    padding-left: vw(0px);
+    padding-right: vw(0px);
+  }
+}
+
+@media (max-width: 1100px) {
+  .about-us{
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 860px) {
+  .adventures{
+    width: 90%;
+    margin: 0 auto;
+  }
+  .adventures__bottom-decor{
+    left: 0;
+  }
+  .adventures__counter-block::before,
+  .adventures__counter-block::after,
+  .adventures__counter-block{
+    display: none;
+  }
+  .about-us{
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 715px) {
+  .adventures__trip-desc{
+    padding: 0;
+  }
+  .adventures__trips-slide::before,
+  .adventures__trips-slide::after,
+  .adventures__bottom-decor{
+    display: none;
+  }
+}
+
+@media (max-width: 680px){
+  .adventures__images{
+    max-width: vwrem(400px, 50%, 20%);
+    min-width: vwrem(400px, 50%, 20%);
+    height: vwrem(600px, 50%, 20%);
+  }
+  .adventures__trip-share{
+    margin-top: auto;
+  }
+  .adventures__trips-slide{
+    align-items: center;
+  }
+}
+
+@media (max-width: 531px) {
+  .adventures__title-block{
+    flex-direction: column;
+    gap: 0;
+  }
+  .adventures__title-block > img{
+    display: none;
+  }
+  .adventures__title-block > span{
+    font-size: vwrem(20px, 50%, 30%);
+    text-align: center;
+  }
+  .header__menu{
+    position: relative;
+  }
+  .header__menu-button{
+    display: block;
+    z-index: 99;
+  }
+  .header__menu-body{
+    z-index: 60;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    transition: left 0.3s ease-in-out;
+    &._active{
+      left: 0;
+    }
+  }
+  .header__menu-list{
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    padding-left: 5%;
+    transition: margin-left 0.3s ease-in-out;
+  }
+}
+
+@media (max-width: 600px){
+  .adventures__images{
+    min-width: 70%;
+  }
+  .adventures__trips-slide{
+    flex-direction: column;
+  }
+  .adventures__trips-slide{
+    gap: 0px;
+  }
+  .about-us__main-text, .adventures__trip-desc{
+    font-size: vwrem(25px, 65%, 30%);
+  }
+  .about-us__photos{
+    grid-template-columns: repeat(3, vwrem(170px, 80%, 20%));
+    grid-template-rows: repeat(4, vwrem(170px, 80%, 20%));
+  }
+  .about-us__photo{
+    height: auto;
+  }
+  .about-us__photo:nth-of-type(1){
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
+  }
+  .about-us__photo:nth-of-type(2){
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+  .about-us__photo:nth-of-type(3){
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+  }
+  .about-us__photo:nth-of-type(4){
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+  }
+}
+
+@media (max-width: 500px){
+  .reviews__reviews-for-adap{
+    display: block;
+    max-width: 100%;
+  }
+  .reviews__reviews-wrapper, .about-us__photos{
+    display: none;
+  }
+  .about-us__photos-for-adaptive{
+    display: grid;
+    grid-template-columns: repeat(5, vwrem(200px, 85%, 15%));
+    grid-template-rows: repeat(2, vwrem(200px, 85%, 15%));
+    margin-top: 20px;
+  }
+  .about-us__photo:nth-of-type(1){
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
+  .about-us__photo:nth-of-type(2){
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+  .about-us__photo:nth-of-type(3){
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+  .about-us__photo:nth-of-type(4){
+    grid-column: 4 / 6;
+    grid-row: 1 / 3;
+  }
+  .about-us__main-text{
+    font-size: vwrem(30px, 65%, 30%);
+  }
+  .about-us__more-link{
+    font-size: vwrem(20px, 60%, 20%);
+    align-self: center;
+  }
+  .reviews__review-text-regular,
+  .reviews__review-text-bold{
+    font-size: vwrem(30px, 70%, 30%);
+  }
+  .reviews__reviewer-name{
+    font-size: vwrem(20px, 70%, 30%);
+  }
+  .reviews__review{
+     margin-right: 30px;
+  }
+}
