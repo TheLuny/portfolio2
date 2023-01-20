@@ -1,13 +1,16 @@
 "use strict"
 
 const menu_slider = new Swiper(".adventures__menu", {
-  slidesPerView: 4.2,
+  slidesPerView: 2.5,
   slideToClickedSlide: true,
   grabCursor: true,
   slidesPerGroup: 1,
   watchOverflow: true,
   breakpoints: {
     400:{
+      slidesPerView: 4,
+    },
+    600:{
       slidesPerView: 4.4574,
     }
   }
@@ -48,7 +51,7 @@ const images_slider = new Swiper(".adventures__images", {
 const reviews_slider = new Swiper(".reviews__reviews-for-adap", {
   slidesPerView: "auto",
   centeredSlides: true,
-  spaceBetween: 60,
+  spaceBetween: 50,
   slidesPerView: 'auto',
   autoplay: {
     delay: 5000,
@@ -56,6 +59,7 @@ const reviews_slider = new Swiper(".reviews__reviews-for-adap", {
 })
 
 const menu_links = document.querySelectorAll(".header__menu-link[data-goto]")
+const menu_button = document.querySelector(".header__menu-button")
 if (menu_links.length > 0) {
   menu_links.forEach(menu_link => {
     menu_link.addEventListener("click", onMenuLinkClick)
@@ -73,6 +77,7 @@ if (menu_links.length > 0) {
       })
 
       menu_body.classList.remove("_active");
+      menu_button.classList.remove("_active");
       document.body.classList.remove("_locked");
 
       e.preventDefault();
@@ -81,7 +86,6 @@ if (menu_links.length > 0) {
 }
 
 const menu_list = document.querySelector(".header__menu-list")
-const menu_button = document.querySelector(".header__menu-button")
 const menu_body = document.querySelector(".header__menu-body")
 if (menu_button) {
   menu_button.addEventListener("click", function(e){
