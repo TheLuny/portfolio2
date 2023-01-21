@@ -158,6 +158,11 @@ window.onresize = function() {
   } else{
     menu_list.style.marginLeft = 0;
   }
+  if (window.innerWidth > 531 && menu_body.classList.contains("_active")) {
+    menu_body.classList.remove("_active");
+    menu_button.classList.remove("_active");
+    document.body.classList.remove("_locked");
+  }
 }
 
 const footer_columns = document.querySelectorAll(".footer__column")
