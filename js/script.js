@@ -159,7 +159,7 @@ if (window.innerWidth < 500 && window.innerWidth > 400) {
   aboutUsAdap.style.gridTemplateRows = `repeat(2, ${aboutUsAdap.offsetWidth / 5}px)`
 }
 if (window.innerWidth <= 400) {
-  aboutUsAdap.style.gridTemplateRows = `repeat(6, ${aboutUsAdap.offsetWidth / (1.5 * 6)}px)`
+  aboutUsAdap.style.gridTemplateRows = `repeat(6, ${aboutUsAdap.offsetWidth / (10)}px)`
   aboutUsAdapPhotos.forEach((photo, i) => {
     if (i != 4) {
       photo.addEventListener("click", function (){
@@ -189,7 +189,7 @@ window.onresize = function() {
     aboutUsAdap.style.gridTemplateRows = `repeat(2, ${aboutUsAdap.offsetWidth / 5}px)`
   }
   if (window.innerWidth <= 400) {
-    aboutUsAdap.style.gridTemplateRows = `repeat(6, ${aboutUsAdap.offsetWidth / (1.5 * 6)}px)`;
+    aboutUsAdap.style.gridTemplateRows = `repeat(6, ${aboutUsAdap.offsetWidth / (10)}px)`;
     aboutUsAdapPhotos.forEach((photo, i) => {
       if (i != 4) {
         photo.addEventListener("click", function (){
