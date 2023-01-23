@@ -216,3 +216,20 @@ footer_columns.forEach((item, i) => {
     }
   });
 });
+
+function copyOnClick(item){
+  let str = document.querySelectorAll(item);
+  let notification = document.querySelector(".notif-on-copy")
+  str.forEach((item, i) => {
+    item.onclick = function(){
+      navigator.clipboard.writeText(item.innerText);
+      notification.style.visibility = "visible";
+      notification.style.opacity = "1";
+      setTimeout(function() {
+        notification.style.visibility = "hidden";
+        notification.style.opacity = "0";
+      }, 2000)
+    }
+  });
+}
+copyOnClick("._copyable")
