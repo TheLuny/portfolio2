@@ -233,3 +233,13 @@ function copyOnClick(item){
   });
 }
 copyOnClick("._copyable")
+
+const button = document.querySelector(".adventures__trip-offers-link")
+button.ontouchstart = function(){
+  button.style.background = "#011627"
+  button.style.boxShadow = "0 0 15px #FCFCFC"
+}
+button.ontouchend = function(){
+  button.style.background = "#00C9E0"
+  button.style.boxShadow = "none"
+}
