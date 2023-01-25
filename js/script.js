@@ -205,16 +205,18 @@ window.onresize = function() {
 
 const footer_columns = document.querySelectorAll(".footer__column")
 footer_columns.forEach((item, i) => {
-  let footer_options = footer_columns[i].querySelectorAll('.footer__column-option')
-  footer_options.forEach((option, j) => {
-    let decor_line = footer_columns[i].querySelector(`.footer__column-decor-line`)
-    option.onmouseover = function() {
-      decor_line.style.width = `calc(85% * ${j + 1} / ${footer_options.length})`;
-    }
-    option.onmouseout = function() {
-      decor_line.style.width = `50px`;
-    }
-  });
+  if (window.matchMedia("(pointer:none), (pointer:coarse)").matches == false) {
+    let footer_options = footer_columns[i].querySelectorAll('.footer__column-option')
+    footer_options.forEach((option, j) => {
+      let decor_line = footer_columns[i].querySelector(`.footer__column-decor-line`)
+      option.onmouseover = function() {
+        decor_line.style.width = `calc(85% * ${j + 1} / ${footer_options.length})`;
+      }
+      option.onmouseout = function() {
+        decor_line.style.width = `50px`;
+      }
+    });
+  }
 });
 
 function copyOnClick(item){
@@ -233,13 +235,3 @@ function copyOnClick(item){
   });
 }
 copyOnClick("._copyable")
-
-const button = document.querySelector(".adventures__trip-offers-link")
-button.ontouchstart = function(){
-  button.style.background = "#011627"
-  button.style.boxShadow = "0 0 15px #FCFCFC"
-}
-button.ontouchend = function(){
-  button.style.background = "#00C9E0"
-  button.style.boxShadow = "none"
-}
