@@ -154,7 +154,21 @@ let aboutUsAdap = document.querySelector(".about-us__photos-for-adaptive")
 let aboutUsAdapPhotos = aboutUsAdap.querySelectorAll(".about-us__photo")
 aboutUsAdapPhotos[0].classList.add("_active")
 aboutUsAdapPhotos[4].style.backgroundImage = getComputedStyle(aboutUsAdapPhotos[0]).backgroundImage;
-let activedPhoto = aboutUsAdap.querySelector("._active");
+let activedAdapPhoto = aboutUsAdap.querySelector("._active");
+
+let aboutUsPhotosBlock = document.querySelector(".about-us__photos")
+let aboutUsPhotos = aboutUsPhotosBlock.querySelectorAll(".about-us__photo")
+let selectedAboutUsPhoto = aboutUsPhotosBlock.querySelector("._selected")
+
+if (window.innerWidth > 600){
+  aboutUsPhotos.forEach((photo) => {
+    photo.addEventListener("click", function(){
+      selectedAboutUsPhoto = aboutUsPhotosBlock.querySelector("._selected")
+      selectedAboutUsPhoto.classList.remove("_selected")
+      photo.classList.add("_selected")
+    })
+  })
+}
 if (window.innerWidth < 500 && window.innerWidth > 400) {
   aboutUsAdap.style.gridTemplateRows = `repeat(2, ${aboutUsAdap.offsetWidth / 5}px)`
 }
@@ -163,8 +177,8 @@ if (window.innerWidth <= 400) {
   aboutUsAdapPhotos.forEach((photo, i) => {
     if (i != 4) {
       photo.addEventListener("click", function (){
-        activedPhoto = aboutUsAdap.querySelector("._active")
-        activedPhoto.classList.remove("_active")
+        activedAdapPhoto = aboutUsAdap.querySelector("._active")
+        activedAdapPhoto.classList.remove("_active")
         photo.classList.add("_active");
         aboutUsAdapPhotos[4].style.backgroundImage = getComputedStyle(photo).backgroundImage;
       })
@@ -180,6 +194,15 @@ window.onresize = function() {
   else{
     menu_list.style.marginLeft = 0;
   }
+  if (window.innerWidth > 600){
+    aboutUsPhotos.forEach((photo) => {
+      photo.addEventListener("click", function(){
+        selectedAboutUsPhoto = aboutUsPhotosBlock.querySelector("._selected")
+        selectedAboutUsPhoto.classList.remove("_selected")
+        photo.classList.add("_selected")
+      })
+    })
+  }
   if (window.innerWidth > 531 && menu_body.classList.contains("_active")) {
     menu_body.classList.remove("_active");
     menu_button.classList.remove("_active");
@@ -193,8 +216,8 @@ window.onresize = function() {
     aboutUsAdapPhotos.forEach((photo, i) => {
       if (i != 4) {
         photo.addEventListener("click", function (){
-          activedPhoto = aboutUsAdap.querySelector("._active")
-          activedPhoto.classList.remove("_active")
+          activedAdapPhoto = aboutUsAdap.querySelector("._active")
+          activedAdapPhoto.classList.remove("_active")
           photo.classList.add("_active");
           aboutUsAdapPhotos[4].style.backgroundImage = getComputedStyle(photo).backgroundImage;
         })
