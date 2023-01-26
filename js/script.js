@@ -36,6 +36,13 @@ const images_slider = new Swiper(".adventures__images", {
     nextEl: ".adventures__image-arrow-right",
     prevEl: ".adventures__image-arrow-left",
   },
+  preloadImages: false,
+  lazy:{
+    loadOnTransitionStart: false,
+    loadPrevNext: false,
+  },
+  watchSlidesProgress: true,
+  watchSlidesVisibility: true,
   on: {
     realIndexChange: function () {
       if (this.activeIndex + 1 < 10) {
