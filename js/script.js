@@ -16,15 +16,6 @@ const menu_slider = new Swiper(".adventures__menu", {
   }
 })
 
-const trips_slider = new Swiper(".adventures__trips", {
-  slidesPerView: 1,
-  effect: "fade",
-  fadeEffect:{
-    crossFade: true,
-  },
-  touchRatio: 0,
-})
-
 const images_slider = new Swiper(".adventures__images", {
   slidesPerView: 1,
   effect: "fade",
@@ -46,10 +37,10 @@ const images_slider = new Swiper(".adventures__images", {
   on: {
     realIndexChange: function () {
       if (this.activeIndex + 1 < 10) {
-        document.querySelector(".adventures__counter").textContent = "0" + (this.activeIndex + 1) + ".";
+        document.querySelector(".adventures__trips-slide._active .adventures__counter").textContent = "0" + (this.activeIndex + 1) + ".";
       } else {
         console.log(this.activeIndex);
-        document.querySelector(".adventures__counter").textContent = (this.activeIndex + 1) + ".";
+        document.querySelector(".adventures__trips-slide._active .adventures__counter").textContent = (this.activeIndex + 1) + ".";
       }
     },
   },
@@ -63,6 +54,11 @@ const reviews_slider = new Swiper(".reviews__reviews-for-adap", {
   autoplay: {
     delay: 5000,
   },
+})
+
+const imagesSlider = document.querySelectorAll(".adventures__images")
+imagesSlider.forEach((slider) => {
+  slider.querySelector(".adventures__counter-block").style.top = "40%"
 })
 
 const menu_links = document.querySelectorAll(".header__menu-link[data-goto]")
@@ -104,13 +100,16 @@ if (menu_button) {
 }
 
 const menu_slides = document.querySelectorAll(".adventures__menu-slide")
+const trip_tabs = document.querySelectorAll(".adventures__trips-slide")
+let activeTripTab;
 let k = 0
+
 menu_slides.forEach((item, i) => {
   item.onclick = function() {
-    document.querySelector(".adventures__counter").textContent = "01.";
-    trips_slider.slideTo(i);
+    activeTripTab = document.querySelector(".adventures__trips-slide._active")
+    activeTripTab.classList.remove("_active")
+    trip_tabs[i].classList.add("_active")
     images_slider[i].slideTo(0);
-    document.querySelector(".adventures__bottom-decor").style.top = "calc(" + (document.querySelector(".adventures__trips-slide:nth-of-type(" + (i + 1) + ")")).offsetHeight + "px" + "-(5.9895833333vw + 2.875rem + 69px) / 1.3333333333)";
     menu_slides.forEach((item, j) => {
       if (i == j) {
         item.style.color = "#41EAD4"
@@ -152,11 +151,6 @@ menu_slides.forEach((item, i) => {
   }
 });
 
-const counter = document.querySelector(".adventures__counter-block");
-counter.style.top = "calc(" + 0.47 * document.querySelector(".adventures__image").offsetHeight + "px - " + counter.offsetHeight + "px / 2 )"
-const trip_decor = document.querySelector(".adventures__bottom-decor")
-trip_decor.style.top = "calc(" + document.querySelector(".adventures__image").offsetHeight + "px" + "-(5.9895833333vw + 2.875rem + 69px) / 1.3333333333)";
-
 let aboutUsAdap = document.querySelector(".about-us__photos-for-adaptive")
 let aboutUsAdapPhotos = aboutUsAdap.querySelectorAll(".about-us__photo")
 aboutUsAdapPhotos[0].classList.add("_active")
@@ -193,8 +187,9 @@ if (window.innerWidth <= 400) {
   })
 }
 window.onresize = function() {
-  trip_decor.style.top = "calc(" + document.querySelector(".adventures__image").offsetHeight + "px" + "-(5.9895833333vw + 2.875rem + 69px) / 1.3333333333)";
-  counter.style.top = "calc(" + 0.47 * document.querySelector(".adventures__image").offsetHeight + "-" + counter.offsetHeight + "px / 2 )"
+  imagesSlider.forEach((slider) => {
+    slider.querySelector(".adventures__counter-block").style.top = "40%"
+  })
   if (document.querySelector(".header__menu-body._active")) {
     menu_list.style.marginLeft = `calc(${menu_button.getBoundingClientRect().left}px - 5%)`;
   }

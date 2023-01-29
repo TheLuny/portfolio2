@@ -66,168 +66,181 @@
         </article>
         <article class="adventures__menu swiper-container link-scrollTo-1" aria-label="Choose trip by it's name">
           <div class="adventures__menu-wrapper swiper-wrapper">
-            <div class="adventures__menu-slide swiper-slide" id="TripSelectionSlide1">Chill Adventure<div></div></div>
-            <div class="adventures__menu-slide swiper-slide">Spooky Times<div></div></div>
-            <div class="adventures__menu-slide swiper-slide">Desert Madness<div></div></div>
-            <div class="adventures__menu-slide swiper-slide">Out in the wild<div></div></div>
+            <div class="adventures__menu-slide swiper-slide" id="TripSelectionSlide1" tabindex="0">Chill Adventure<div></div></div>
+            <div class="adventures__menu-slide swiper-slide" tabindex="0">Spooky Times<div></div></div>
+            <div class="adventures__menu-slide swiper-slide" tabindex="0">Desert Madness<div></div></div>
+            <div class="adventures__menu-slide swiper-slide" tabindex="0">Out in the wild<div></div></div>
           </div>
         </article>
-        <article class="adventures__trips swiper-container">
-          <div class="adventures__counter-block">
-            <span class="adventures__counter">01.</span>
-            <span class="adventures__counter-desc">GRAND DUNES<br>LANDSCAPE</span>
+        <article class="adventures__trips">
+          <div class="adventures__trips-slide _active">
+            <div class="adventures__bottom-decor"></div>
+            <div class="adventures__images swiper-container">
+              <div class="adventures__counter-block">
+                <span class="adventures__counter">01.</span>
+                <span class="adventures__counter-desc">GRAND DUNES<br>LANDSCAPE</span>
+              </div>
+              <div class="adventures__image-arrow-left">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m11 5l-7 7l7 7m-7-7h16"/></svg></div>
+              <div class="adventures__image-arrow-right">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m-7-7l7 7l-7 7"/></svg></div>
+              <div class="adventures__images-wrapper swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="adventures__image swiper-lazy" data-background="images/trip-image-1.jpg"></div>
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="adventures__image swiper-lazy" data-background="images/trip-image-2.jpg"></div>
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="adventures__image swiper-lazy" data-background="images/trip-image-3.jpg"></div>
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+              </div>
+            </div>
+            <div class="adventures__trip-comment">
+                <div class="adventures__trip-text-block">
+                  <span class="adventures__trip-title">Chill Adventure</span>
+                  <span class="adventures__trip-desc">
+                  <span class="adventures__trip-desc-bold">Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices curabitur. Erat id fringilla arcu condimentum fames.</span>
+                  <br><br>Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cum rutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra lacus, dignissim pharetra ipsum blandit. Feugiat quis quam consectetur lectus id quis tortor vel, mattis.</span>
+                </div>
+                <a href="#" class="adventures__trip-offers-link">SEE OUR LATEST OFFER</a>
+                <div class="adventures__trip-share">
+                  <span>SHARE IT:</span>
+                  <div class="adventures__trip-share-icons">
+                    <a href="#" class="adventures__trip-share-icon social-icon" aria-label="Share this trip in Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 16a4 4 0 1 0 0-8a4 4 0 0 0 0 8Z"/><path d="M3 16V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m17.5 6.51l.01-.011"/></g></svg></a>
+                    <a href="#" class="adventures__trip-share-icon social-icon" aria-label="Share this trip in Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2Z"/></svg></a>
+                    <a href="#" class="adventures__trip-share-icon social-icon" aria-label="Share this trip in Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M23 3.01s-2.018 1.192-3.14 1.53a4.48 4.48 0 0 0-7.86 3v1a10.66 10.66 0 0 1-9-4.53s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5c0-.278-.028-.556-.08-.83C21.94 5.674 23 3.01 23 3.01Z"/></svg></a>
+                  </div>
+                </div>
+            </div>
           </div>
-          <div class="adventures__bottom-decor"></div>
-          <div class="adventures__trips-wrapper swiper-wrapper">
-            <div class="adventures__trips-slide swiper-slide">
-              <div class="adventures__images swiper-container">
-                  <div class="adventures__image-arrow-left">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m11 5l-7 7l7 7m-7-7h16"/></svg></div>
-                  <div class="adventures__image-arrow-right">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m-7-7l7 7l-7 7"/></svg></div>
-                <div class="adventures__images-wrapper swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="adventures__image swiper-lazy" data-background="images/trip-image-1.jpg"></div>
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="adventures__image swiper-lazy" data-background="images/trip-image-2.jpg"></div>
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="adventures__image swiper-lazy" data-background="images/trip-image-3.jpg"></div>
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                </div>
+          <div class="adventures__trips-slide">
+            <div class="adventures__bottom-decor"></div>
+            <div class="adventures__images swiper-container">
+              <div class="adventures__counter-block">
+                <span class="adventures__counter">01.</span>
+                <span class="adventures__counter-desc">GRAND DUNES<br>LANDSCAPE</span>
               </div>
-              <div class="adventures__trip-comment">
-                  <div class="adventures__trip-text-block">
-                    <span class="adventures__trip-title">Chill Adventure</span>
-                    <span class="adventures__trip-desc">
-                    <span class="adventures__trip-desc-bold">Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices curabitur. Erat id fringilla arcu condimentum fames.</span>
-                    <br><br>Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cum rutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra lacus, dignissim pharetra ipsum blandit. Feugiat quis quam consectetur lectus id quis tortor vel, mattis.</span>
-                  </div>
-                  <a href="#" class="adventures__trip-offers-link">SEE OUR LATEST OFFER</a>
-                  <div class="adventures__trip-share">
-                    <span>SHARE IT:</span>
-                    <div class="adventures__trip-share-icons">
-                      <a href="#"><svg class="adventures__trip-share-icon social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 16a4 4 0 1 0 0-8a4 4 0 0 0 0 8Z"/><path d="M3 16V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m17.5 6.51l.01-.011"/></g></svg></a>
-                      <a href="#"><svg class="adventures__trip-share-icon social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2Z"/></svg></a>
-                      <a href="#"><svg class="adventures__trip-share-icon social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M23 3.01s-2.018 1.192-3.14 1.53a4.48 4.48 0 0 0-7.86 3v1a10.66 10.66 0 0 1-9-4.53s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5c0-.278-.028-.556-.08-.83C21.94 5.674 23 3.01 23 3.01Z"/></svg></a>
-                    </div>
-                  </div>
+              <div class="adventures__image-arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m11 5l-7 7l7 7m-7-7h16"/></svg></div>
+              <div class="adventures__image-arrow-right"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m-7-7l7 7l-7 7"/></svg></div>
+              <div class="adventures__images-wrapper swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="adventures__image swiper-lazy" data-background="images/trip-image-1.jpg"></div>
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="adventures__image swiper-lazy" data-background="images/trip-image-2.jpg"></div>
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="adventures__image swiper-lazy" data-background="images/trip-image-3.jpg"></div>
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
               </div>
             </div>
-            <div class="adventures__trips-slide swiper-slide">
-              <div class="adventures__images swiper-container">
-                <div class="adventures__image-arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m11 5l-7 7l7 7m-7-7h16"/></svg></div>
-                <div class="adventures__image-arrow-right"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m-7-7l7 7l-7 7"/></svg></div>
-                <div class="adventures__images-wrapper swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="adventures__image swiper-lazy" data-background="images/trip-image-1.jpg"></div>
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="adventures__image swiper-lazy" data-background="images/trip-image-2.jpg"></div>
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="adventures__image swiper-lazy" data-background="images/trip-image-3.jpg"></div>
-                    <div class="swiper-lazy-preloader"></div>
+            <div class="adventures__trip-comment">
+                <div class="adventures__trip-text-block">
+                  <span class="adventures__trip-title">Spooky Times</span>
+                  <span class="adventures__trip-desc">
+                  <span class="adventures__trip-desc-bold">Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices curabitur. Erat id fringilla arcu condimentum fames.</span>
+                  <br><br>Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cum rutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra lacus, dignissim pharetra ipsum blandit. Feugiat quis quam consectetur lectus id quis tortor vel, mattis.</span>
+                </div>
+                <a href="#" class="adventures__trip-offers-link">SEE OUR LATEST OFFER</a>
+                <div class="adventures__trip-share">
+                  <span>SHARE IT:</span>
+                  <div class="adventures__trip-share-icons">
+                    <a href="#"><svg class="adventures__trip-share-icon social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 16a4 4 0 1 0 0-8a4 4 0 0 0 0 8Z"/><path d="M3 16V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m17.5 6.51l.01-.011"/></g></svg></a>
+                    <a href="#"><svg class="adventures__trip-share-icon social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2Z"/></svg></a>
+                    <a href="#"><svg class="adventures__trip-share-icon social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M23 3.01s-2.018 1.192-3.14 1.53a4.48 4.48 0 0 0-7.86 3v1a10.66 10.66 0 0 1-9-4.53s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5c0-.278-.028-.556-.08-.83C21.94 5.674 23 3.01 23 3.01Z"/></svg></a>
                   </div>
                 </div>
+            </div>
+          </div>
+          <div class="adventures__trips-slide">
+            <div class="adventures__bottom-decor"></div>
+            <div class="adventures__images swiper-container">
+              <div class="adventures__counter-block">
+                <span class="adventures__counter">01.</span>
+                <span class="adventures__counter-desc">GRAND DUNES<br>LANDSCAPE</span>
               </div>
-              <div class="adventures__trip-comment">
-                  <div class="adventures__trip-text-block">
-                    <span class="adventures__trip-title">Spooky Times</span>
-                    <span class="adventures__trip-desc">
-                    <span class="adventures__trip-desc-bold">Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices curabitur. Erat id fringilla arcu condimentum fames.</span>
-                    <br><br>Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cum rutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra lacus, dignissim pharetra ipsum blandit. Feugiat quis quam consectetur lectus id quis tortor vel, mattis.</span>
-                  </div>
-                  <a href="#" class="adventures__trip-offers-link">SEE OUR LATEST OFFER</a>
-                  <div class="adventures__trip-share">
-                    <span>SHARE IT:</span>
-                    <div class="adventures__trip-share-icons">
-                      <a href="#"><svg class="adventures__trip-share-icon social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 16a4 4 0 1 0 0-8a4 4 0 0 0 0 8Z"/><path d="M3 16V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m17.5 6.51l.01-.011"/></g></svg></a>
-                      <a href="#"><svg class="adventures__trip-share-icon social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2Z"/></svg></a>
-                      <a href="#"><svg class="adventures__trip-share-icon social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M23 3.01s-2.018 1.192-3.14 1.53a4.48 4.48 0 0 0-7.86 3v1a10.66 10.66 0 0 1-9-4.53s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5c0-.278-.028-.556-.08-.83C21.94 5.674 23 3.01 23 3.01Z"/></svg></a>
-                    </div>
-                  </div>
+              <div class="adventures__image-arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m11 5l-7 7l7 7m-7-7h16"/></svg></div>
+              <div class="adventures__image-arrow-right"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m-7-7l7 7l-7 7"/></svg></div>
+              <div class="adventures__images-wrapper swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="adventures__image swiper-lazy" data-background="images/trip-image-1.jpg"></div>
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="adventures__image swiper-lazy" data-background="images/trip-image-2.jpg"></div>
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="adventures__image swiper-lazy" data-background="images/trip-image-3.jpg"></div>
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
               </div>
             </div>
-            <div class="adventures__trips-slide swiper-slide">
-              <div class="adventures__images swiper-container">
-                <div class="adventures__image-arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m11 5l-7 7l7 7m-7-7h16"/></svg></div>
-                <div class="adventures__image-arrow-right"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m-7-7l7 7l-7 7"/></svg></div>
-                <div class="adventures__images-wrapper swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="adventures__image swiper-lazy" data-background="images/trip-image-1.jpg"></div>
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="adventures__image swiper-lazy" data-background="images/trip-image-2.jpg"></div>
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="adventures__image swiper-lazy" data-background="images/trip-image-3.jpg"></div>
-                    <div class="swiper-lazy-preloader"></div>
+            <div class="adventures__trip-comment">
+                <div class="adventures__trip-text-block">
+                  <span class="adventures__trip-title">Desert Madness</span>
+                  <span class="adventures__trip-desc">
+                  <span class="adventures__trip-desc-bold">Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices curabitur. Erat id fringilla arcu condimentum fames.</span>
+                  <br><br>Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cum rutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra lacus, dignissim pharetra ipsum blandit. Feugiat quis quam consectetur lectus id quis tortor vel, mattis.</span>
+                </div>
+                <a href="#" class="adventures__trip-offers-link">SEE OUR LATEST OFFER</a>
+                <div class="adventures__trip-share">
+                  <span>SHARE IT:</span>
+                  <div class="adventures__trip-share-icons">
+                    <a href="#"><svg class="adventures__trip-share-icon social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 16a4 4 0 1 0 0-8a4 4 0 0 0 0 8Z"/><path d="M3 16V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m17.5 6.51l.01-.011"/></g></svg></a>
+                    <a href="#"><svg class="adventures__trip-share-icon social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2Z"/></svg></a>
+                    <a href="#"><svg class="adventures__trip-share-icon social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M23 3.01s-2.018 1.192-3.14 1.53a4.48 4.48 0 0 0-7.86 3v1a10.66 10.66 0 0 1-9-4.53s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5c0-.278-.028-.556-.08-.83C21.94 5.674 23 3.01 23 3.01Z"/></svg></a>
                   </div>
                 </div>
+            </div>
+          </div>
+          <div class="adventures__trips-slide">
+            <div class="adventures__bottom-decor"></div>
+            <div class="adventures__images swiper-container">
+              <div class="adventures__counter-block">
+                <span class="adventures__counter">01.</span>
+                <span class="adventures__counter-desc">GRAND DUNES<br>LANDSCAPE</span>
               </div>
-              <div class="adventures__trip-comment">
-                  <div class="adventures__trip-text-block">
-                    <span class="adventures__trip-title">Desert Madness</span>
-                    <span class="adventures__trip-desc">
-                    <span class="adventures__trip-desc-bold">Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices curabitur. Erat id fringilla arcu condimentum fames.</span>
-                    <br><br>Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cum rutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra lacus, dignissim pharetra ipsum blandit. Feugiat quis quam consectetur lectus id quis tortor vel, mattis.</span>
-                  </div>
-                  <a href="#" class="adventures__trip-offers-link">SEE OUR LATEST OFFER</a>
-                  <div class="adventures__trip-share">
-                    <span>SHARE IT:</span>
-                    <div class="adventures__trip-share-icons">
-                      <a href="#"><svg class="adventures__trip-share-icon social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 16a4 4 0 1 0 0-8a4 4 0 0 0 0 8Z"/><path d="M3 16V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m17.5 6.51l.01-.011"/></g></svg></a>
-                      <a href="#"><svg class="adventures__trip-share-icon social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2Z"/></svg></a>
-                      <a href="#"><svg class="adventures__trip-share-icon social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M23 3.01s-2.018 1.192-3.14 1.53a4.48 4.48 0 0 0-7.86 3v1a10.66 10.66 0 0 1-9-4.53s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5c0-.278-.028-.556-.08-.83C21.94 5.674 23 3.01 23 3.01Z"/></svg></a>
-                    </div>
-                  </div>
+              <div class="adventures__image-arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m11 5l-7 7l7 7m-7-7h16"/></svg></div>
+              <div class="adventures__image-arrow-right"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m-7-7l7 7l-7 7"/></svg></div>
+              <div class="adventures__images-wrapper swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="adventures__image swiper-lazy" data-background="images/trip-image-1.jpg"></div>
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="adventures__image swiper-lazy" data-background="images/trip-image-2.jpg"></div>
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="adventures__image swiper-lazy" data-background="images/trip-image-3.jpg"></div>
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
               </div>
             </div>
-            <div class="adventures__trips-slide swiper-slide">
-              <div class="adventures__images swiper-container">
-                <div class="adventures__image-arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m11 5l-7 7l7 7m-7-7h16"/></svg></div>
-                <div class="adventures__image-arrow-right"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m-7-7l7 7l-7 7"/></svg></div>
-                <div class="adventures__images-wrapper swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="adventures__image swiper-lazy" data-background="images/trip-image-1.jpg"></div>
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="adventures__image swiper-lazy" data-background="images/trip-image-2.jpg"></div>
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="adventures__image swiper-lazy" data-background="images/trip-image-3.jpg"></div>
-                    <div class="swiper-lazy-preloader"></div>
+            <div class="adventures__trip-comment">
+                <div class="adventures__trip-text-block">
+                  <span class="adventures__trip-title">Out in the wild</span>
+                  <span class="adventures__trip-desc">
+                  <span class="adventures__trip-desc-bold">Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices curabitur. Erat id fringilla arcu condimentum fames.</span>
+                  <br><br>Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cum rutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra lacus, dignissim pharetra ipsum blandit. Feugiat quis quam consectetur lectus id quis tortor vel, mattis.</span>
+                </div>
+                <a href="#" class="adventures__trip-offers-link">SEE OUR LATEST OFFER</a>
+                <div class="adventures__trip-share">
+                  <span>SHARE IT:</span>
+                  <div class="adventures__trip-share-icons">
+                    <a href="#"><svg class="adventures__trip-share-icon social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 16a4 4 0 1 0 0-8a4 4 0 0 0 0 8Z"/><path d="M3 16V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m17.5 6.51l.01-.011"/></g></svg></a>
+                    <a href="#"><svg class="adventures__trip-share-icon social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2Z"/></svg></a>
+                    <a href="#"><svg class="adventures__trip-share-icon social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M23 3.01s-2.018 1.192-3.14 1.53a4.48 4.48 0 0 0-7.86 3v1a10.66 10.66 0 0 1-9-4.53s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5c0-.278-.028-.556-.08-.83C21.94 5.674 23 3.01 23 3.01Z"/></svg></a>
                   </div>
                 </div>
-              </div>
-              <div class="adventures__trip-comment">
-                  <div class="adventures__trip-text-block">
-                    <span class="adventures__trip-title">Out in the wild</span>
-                    <span class="adventures__trip-desc">
-                    <span class="adventures__trip-desc-bold">Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices curabitur. Erat id fringilla arcu condimentum fames.</span>
-                    <br><br>Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cum rutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra lacus, dignissim pharetra ipsum blandit. Feugiat quis quam consectetur lectus id quis tortor vel, mattis.</span>
-                  </div>
-                  <a href="#" class="adventures__trip-offers-link">SEE OUR LATEST OFFER</a>
-                  <div class="adventures__trip-share">
-                    <span>SHARE IT:</span>
-                    <div class="adventures__trip-share-icons">
-                      <a href="#"><svg class="adventures__trip-share-icon social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 16a4 4 0 1 0 0-8a4 4 0 0 0 0 8Z"/><path d="M3 16V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m17.5 6.51l.01-.011"/></g></svg></a>
-                      <a href="#"><svg class="adventures__trip-share-icon social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2Z"/></svg></a>
-                      <a href="#"><svg class="adventures__trip-share-icon social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M23 3.01s-2.018 1.192-3.14 1.53a4.48 4.48 0 0 0-7.86 3v1a10.66 10.66 0 0 1-9-4.53s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5c0-.278-.028-.556-.08-.83C21.94 5.674 23 3.01 23 3.01Z"/></svg></a>
-                    </div>
-                  </div>
-              </div>
             </div>
           </div>
         </article>
@@ -452,14 +465,14 @@
               <div class="footer__column-decor-sqr"></div>
             </div>
             <div class="footer__column-icon-wrapper">
-              <a href="#" class="footer__column-option footer__icon social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 16a4 4 0 1 0 0-8a4 4 0 0 0 0 8Z"/><path d="M3 16V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m17.5 6.51l.01-.011"/></g></svg></a>
-              <a href="#" class="footer__column-option footer__icon social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2Z"/></svg></a>
-              <a href="#" class="footer__column-option footer__icon social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M23 3.01s-2.018 1.192-3.14 1.53a4.48 4.48 0 0 0-7.86 3v1a10.66 10.66 0 0 1-9-4.53s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5c0-.278-.028-.556-.08-.83C21.94 5.674 23 3.01 23 3.01Z"/></svg></a>
+              <a href="#" class="footer__column-option footer__icon social-icon" aria-label="Visit Night Trips Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 16a4 4 0 1 0 0-8a4 4 0 0 0 0 8Z"/><path d="M3 16V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m17.5 6.51l.01-.011"/></g></svg></a>
+              <a href="#" class="footer__column-option footer__icon social-icon" aria-label="Visit Night Trips Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2Z"/></svg></a>
+              <a href="#" class="footer__column-option footer__icon social-icon" aria-label="Visit Night Trips Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M23 3.01s-2.018 1.192-3.14 1.53a4.48 4.48 0 0 0-7.86 3v1a10.66 10.66 0 0 1-9-4.53s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5c0-.278-.028-.556-.08-.83C21.94 5.674 23 3.01 23 3.01Z"/></svg></a>
             </div>
           </div>
         </div>
       </div>
-      <span class="footer__copyright">Copyright © Night Trips 2019. All rights reserved.</span>
+      <span class="footer__copyright">Copyright © Night Trips 2023. All rights reserved.</span>
       <a href="#"><span class="footer__logo">NT<span>.</span></span></a>
     </footer>
     <script src="js/swiper-bundle.min.js" charset="utf-8"></script>
