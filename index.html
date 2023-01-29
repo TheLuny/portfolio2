@@ -13,15 +13,16 @@
   <div class="wrapper">
     <div class="notif-on-copy">Copied to clipboard</div>
     <header class="header">
+      <a href="#TripSelectionSlide1" class="header__skip-to-content-link" tabindex="0">Skip to content</a>
       <div class="header__upper-body">
         <a href="#"><span class="header__logo">NT<span>.</span></span></a>
         <div class="header__menu">
           <button class="header__menu-button"><span>MENU</span></button>
           <nav class="header__menu-body">
             <ul class="header__menu-list">
-              <li class="header__menu-item"><a data-goto=".link-scrollTo-1" href="#" class="header__menu-link">Our product</a></li>
-              <li class="header__menu-item"><a data-goto=".link-scrollTo-2" href="#" class="header__menu-link">About us</a></li>
-              <li class="header__menu-item"><a data-goto=".link-scrollTo-3" href="#" class="header__menu-link">Feedback</a></li>
+              <li class="header__menu-item"><a data-goto=".link-scrollTo-1" href="#" class="header__menu-link" tabindex="0">Our product</a></li>
+              <li class="header__menu-item"><a data-goto=".link-scrollTo-2" href="#" class="header__menu-link" tabindex="0">About us</a></li>
+              <li class="header__menu-item"><a data-goto=".link-scrollTo-3" href="#" class="header__menu-link" tabindex="0">Feedback</a></li>
             </ul>
           </nav>
         </div>
@@ -36,9 +37,9 @@
           <span>SCROLL</span>
         </div>
         <div class="header__icon-wrapper">
-          <a href="#"><svg class="header__icon social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M23 3.01s-2.018 1.192-3.14 1.53a4.48 4.48 0 0 0-7.86 3v1a10.66 10.66 0 0 1-9-4.53s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5c0-.278-.028-.556-.08-.83C21.94 5.674 23 3.01 23 3.01Z"/></svg></a>
-          <a href="#"><svg class="header__icon social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 16a4 4 0 1 0 0-8a4 4 0 0 0 0 8Z"/><path d="M3 16V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m17.5 6.51l.01-.011"/></g></svg></a>
-          <a href="#"><svg class="header__icon social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2Z"/></svg></a>
+          <a href="#" class="header__icon social-icon" aria-label="Go to company's Twitter"><svg class="" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M23 3.01s-2.018 1.192-3.14 1.53a4.48 4.48 0 0 0-7.86 3v1a10.66 10.66 0 0 1-9-4.53s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5c0-.278-.028-.556-.08-.83C21.94 5.674 23 3.01 23 3.01Z"/></svg></a>
+          <a href="#" class="header__icon social-icon" aria-label="Go to company's Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 16a4 4 0 1 0 0-8a4 4 0 0 0 0 8Z"/><path d="M3 16V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m17.5 6.51l.01-.011"/></g></svg></a>
+          <a href="#" class="header__icon social-icon" aria-label="Go to company's Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2Z"/></svg></a>
         </div>
       </div>
       <div class="bg"></div>
@@ -57,15 +58,15 @@
       <div class="bg-light-11"></div>
       <div class="bg-light-12"></div>
       <div class="bg-image"></div>
-      <section class="adventures">
-        <article class="adventures__title-block">
+      <section class="adventures" aria-label="Choose your trip">
+        <article class="adventures__title-block" aria-label="Title block">
           <h2 class="adventures__title">Pick your trip</h2>
           <img src="images/x-symbol.svg" alt="x-symbol">
           <span class="adventures__section-desc">Our team put together some trips to you to discover,<br>feel free to discover each of them.</span>
         </article>
-        <article class="adventures__menu swiper-container link-scrollTo-1">
+        <article class="adventures__menu swiper-container link-scrollTo-1" aria-label="Choose trip by it's name">
           <div class="adventures__menu-wrapper swiper-wrapper">
-            <div class="adventures__menu-slide swiper-slide">Chill Adventure<div></div></div>
+            <div class="adventures__menu-slide swiper-slide" id="TripSelectionSlide1">Chill Adventure<div></div></div>
             <div class="adventures__menu-slide swiper-slide">Spooky Times<div></div></div>
             <div class="adventures__menu-slide swiper-slide">Desert Madness<div></div></div>
             <div class="adventures__menu-slide swiper-slide">Out in the wild<div></div></div>
@@ -231,7 +232,7 @@
           </div>
         </article>
       </section>
-      <section class="about-us">
+      <section class="about-us" aria-label="Information about people behind Night Trips ">
         <div class="about-us__text-block">
           <div class="about-us__title link-scrollTo-2">About us</div>
           <div class="about-us__main-text">
@@ -270,7 +271,7 @@
           </div>
         </div>
       </section>
-      <section class="reviews">
+      <section class="reviews" aria-label="Feedback of your customers">
         <h2 class="reviews__title link-scrollTo-3">People’s thoughts</h2>
         <h3>SEE WHAT ARE OTHERS SAYING</h3>
         <div class="reviews__reviews-for-adap swiper-container">
@@ -397,7 +398,7 @@
         <h4 class="reviews__soon-subtitle">We hope to meet each other <br> very soon</h4>
       </section>
     </main>
-    <footer>
+    <footer class="footer">
       <div class="footer__footer-main">
         <div class="footer__column-wrapper">
           <div class="footer__column">
@@ -440,9 +441,9 @@
               <div class="footer__column-decor-line"></div>
               <div class="footer__column-decor-sqr"></div>
             </div>
-            <span href="#" class="footer__column-option footer__column-option_text _copyable"><span>reply@nt.gmail.com</span></span>
-            <span href="#" class="footer__column-option footer__column-option_text _copyable">(405) 555-0128</span>
-            <a class="footer__column-option footer__column-option_text _copyable">(252) 555-0126</a>
+            <span href="#" class="footer__column-option footer__column-option_text _copyable" tabindex="0" aria-label="Click to copy email"><span>reply@nt.gmail.com</span></span>
+            <span href="#" class="footer__column-option footer__column-option_text _copyable" tabindex="0" aria-label="Click to copy phone number of country code 405">(405) 555-0128</span>
+            <span class="footer__column-option footer__column-option_text _copyable" tabindex="0" aria-label="Click to copy phone number of country code 252">(252) 555-0126</spanx>
           </div>
           <div class="footer__column">
             <span class="footer__column-title">Follow us</span>
